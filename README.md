@@ -1,0 +1,1 @@
+# sync_postgresql_fastapi
