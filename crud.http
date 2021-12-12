@@ -1,0 +1,13 @@
+### CREATE
+POST http://localhost:8000/task
+content-type: application/json
+
+{
+	"title": "クリーニングを取りに行く"
+}
+
+### READ
+http://localhost:8000/tasks
+
+### DELETE
+DELETE http://localhost:8000/task/1
