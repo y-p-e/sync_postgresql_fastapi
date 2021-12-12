@@ -8,6 +8,14 @@ http://localhost:8000/docs
 
 # 事前準備
 
+## docker 起動
+
+```
+docker-compose build
+docker-compose up
+
+```
+
 ## マイグレーション実行
 
 ```
