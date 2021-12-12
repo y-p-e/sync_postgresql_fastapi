@@ -11,6 +11,10 @@ router = APIRouter()
 def list_tasks(db: Session = Depends(get_db)):
     return task_crud.get_tasks(db)
 
+@router.get("/task/{task_id}", response_model=task_schema.Task)
+def list_task(task_id: int, db: Session = Depends(get_db)):
+    return task_crud.get_task(db, task_id)
+
 @router.post("/task", response_model=task_schema.TaskCreateResponse)
 def create_task(task_body: task_schema.TaskCreate, db: Session = Depends(get_db)):
     return task_crud.create_task(db, task_body)

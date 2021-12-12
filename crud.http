@@ -9,5 +9,8 @@ content-type: application/json
 ### READ
 http://localhost:8000/tasks
 
+### READ
+http://localhost:8000/task/1
+
 ### DELETE
 DELETE http://localhost:8000/task/1
