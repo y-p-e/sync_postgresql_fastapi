@@ -11,7 +11,7 @@ http://localhost:8000/docs
 ## docker 起動
 
 ```
-docker-compose build
+docker-compose run --entrypoint "poetry install" demo-app
 docker-compose up
 
 ```

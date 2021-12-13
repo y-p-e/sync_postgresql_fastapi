@@ -6,7 +6,7 @@ engine = create_engine(DB_URL, echo=True)
 Session = scoped_session(
             sessionmaker(
                 autocommit = False,
-                autoflush = True,
+                autoflush = False,
                 bind = engine))   
 
 Base = declarative_base()

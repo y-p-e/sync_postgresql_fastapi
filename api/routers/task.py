@@ -19,6 +19,10 @@ def list_task(task_id: int, db: Session = Depends(get_db)):
 def create_task(task_body: task_schema.TaskCreate, db: Session = Depends(get_db)):
     return task_crud.create_task(db, task_body)
 
+@router.put("/task/{task_id}", response_model=task_schema.TaskCreateResponse)
+def create_task(task_id: int, task_body: task_schema.TaskCreate, db: Session = Depends(get_db)):
+    return task_crud.update_task(db, task_id, task_body)
+
 @router.delete("/task/{task_id}", response_model=None)
 def delete_task(task_id: int, db: Session = Depends(get_db)):
     return task_crud.delete_task(db, task_id)
